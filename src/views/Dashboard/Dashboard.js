@@ -123,8 +123,35 @@ export default function Dashboard() {
 						</Flex>
 					</CardHeader>
 					<CardBody>
+						<Flex flexDirection='column' alignItems='center'> 
 						{/* Add live stream content here */}
-						<Image src='https://pm1.aminoapps.com/7544/d523bfe83733e68a0f353744a72131efd890b496r1-500-670v2_hq.jpg' maxH="70%"/>
+						<Image src='https://pm1.aminoapps.com/7544/d523bfe83733e68a0f353744a72131efd890b496r1-500-670v2_hq.jpg' maxH="70%" />
+
+							   {/* Text bubble below the image */}
+							<Box
+								bg="gray.700"
+								p={3}
+								borderRadius="lg"
+								maxW="75%"
+								textAlign="center"
+								position="relative" // For bubble styling
+								_before={{
+								content: '""',
+								position: "absolute",
+								bottom: "-10px", // Position the tail below the box
+								left: "50%",
+								transform: "translateX(-50%)", // Ensure the tail is centered
+								borderWidth: "10px",
+								borderStyle: "solid",
+								borderColor: "gray.700 transparent transparent transparent", // Triangle shape
+								}}
+							>
+								<Text color="white">
+								Live stream is running smoothly. Let us know if you experience any issues!
+								</Text>
+							</Box>
+
+						</Flex>
 					</CardBody>
 				</Card>
 
