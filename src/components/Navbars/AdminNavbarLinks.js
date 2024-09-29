@@ -21,7 +21,7 @@ import avatar3 from "assets/img/avatars/avatar3.png";
 // Custom Icons
 import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
-import { ItemContent } from "components/Menu/ItemContent";
+
 import { SidebarResponsive } from "components/Sidebar/Sidebar";
 import PropTypes from "prop-types";
 import React from "react";

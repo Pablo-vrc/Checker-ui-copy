@@ -51,12 +51,19 @@ import { ArrowUpIcon } from '@chakra-ui/icons';
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
+
+import IconBox from 'components/Icons/IconBox';
+// Icons
+import { CartIcon, DocumentIcon, GlobeIcon, RocketIcon, StatsIcon, WalletIcon } from 'components/Icons/Icons.js';
+import DashboardTableRow from 'components/Tables/DashboardTableRow';
+import TimelineRow from 'components/Tables/TimelineRow';
 import React from 'react';
 import { AiFillCheckCircle } from 'react-icons/ai';
 // Data
 import { dashboardTableData, timelineData } from 'variables/general';
 
 export default function Dashboard() {
+	const messages = ["Hi Number One", "Hi Number two", "How are you one", "I am good two"];
 	return (
 		<Flex flexDirection='column'>
 			<Grid templateColumns={{ sm: '1fr', md: '1fr 1fr', '2xl': '2fr 1.2fr 1.5fr' }} my='26px' gap='18px'>
@@ -105,7 +112,7 @@ export default function Dashboard() {
 			{/* Chat, Live Stream, and Geolocation Cards Side by Side */}
 			<Grid templateColumns={{ sm: '1fr', md: '1fr 1fr 1fr' }} gap='24px' my='26px'>
 				{/* Chat Card */}
-				<Card>
+				<Card maxH="80%">
 					<CardHeader mb='32px'>
 						<Flex direction='column'>
 							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
@@ -119,8 +126,10 @@ export default function Dashboard() {
 							</Flex>
 						</Flex>
 					</CardHeader>
-					<CardBody display='flex' flexDirection='column' justifyContent='flex-end' height='100%'>
-						<VStack align='start' spacing={4}>
+					<CardBody maxH="calc(50vh - 80px)" overflowY='scroll' display="flex" flexDirection="column" justifyContent="space-between">
+					{/*Online chat here*/}	
+						<VStack align='start' spacing={4} >
+							
 							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
 								<Text color='white'>User: Hi! How can I help you today?</Text>
 							</Box>
@@ -129,6 +138,19 @@ export default function Dashboard() {
 							</Box>
 							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
 								<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
 							</Box>
 							<InputGroup>
 								<Input placeholder='Type a message...' size='md' color='white' bg='gray.800' />
