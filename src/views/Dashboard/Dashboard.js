@@ -51,8 +51,7 @@ import {ArrowUpIcon} from '@chakra-ui/icons'
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
-import BarChart from 'components/Charts/BarChart';
-import LineChart from 'components/Charts/LineChart';
+
 import IconBox from 'components/Icons/IconBox';
 // Icons
 import { CartIcon, DocumentIcon, GlobeIcon, RocketIcon, StatsIcon, WalletIcon } from 'components/Icons/Icons.js';
