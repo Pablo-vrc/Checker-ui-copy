@@ -17,6 +17,7 @@
 */
 // Chakra imports
 import {
+	Avatar,
 	Box,
 	Button,
 	CircularProgress,
@@ -24,10 +25,14 @@ import {
 	Flex,
 	Grid,
 	Icon,
+	Input,
+	InputLeftElement,
 	Progress,
 	SimpleGrid,
 	Spacer,
 	Stack,
+	VStack,
+	Hstack,
 	Stat,
 	StatHelpText,
 	StatLabel,
@@ -37,10 +42,10 @@ import {
 	Text,
 	Th,
 	Thead,
+	InputGroup,
 	Tr
 } from '@chakra-ui/react';
-// Styles for the circular progressbar
-import medusa from 'assets/img/cardimgfree.png';
+import {ArrowUpIcon} from '@chakra-ui/icons'
 // Custom components
 import Card from 'components/Card/Card.js';
 import CardBody from 'components/Card/CardBody.js';
@@ -83,54 +88,42 @@ export default function Dashboard() {
 				<Card
 					p='0px'
 					gridArea={{ md: '1 / 1 / 2 / 3', '2xl': 'auto' }}
-					bgImage={medusa}
 					bgSize='cover'
 					bgPosition='50%'>
 					<CardBody w='100%' h='100%'>
 						<Flex flexDirection={{ sm: 'column', lg: 'row' }} w='100%' h='100%'>
 							<Flex flexDirection='column' h='100%' p='22px' minW='60%' lineHeight='1.6'>
-								<Text fontSize='sm' color='gray.400' fontWeight='bold'>
-									Welcome back,
+								<Text fontSize='28px' color='#fff' fontWeight='bold' mb='6px'>
+									Name:  Mark Johnson
 								</Text>
-								<Text fontSize='28px' color='#fff' fontWeight='bold' mb='18px'>
-									Mark Johnson
+								<Text fontSize='24px' color='white' fontWeight='normal'>
+									Age:  22 years old
 								</Text>
-								<Text fontSize='md' color='gray.400' fontWeight='normal' mb='auto'>
-									Glad to see you again! <br />
-									Ask me anything.
+								<Text fontSize='md' color='white' fontWeight='normal' mb='auto'>
+									Native Lenguage:  Spanish
 								</Text>
 								<Spacer />
-								<Flex align='center'>
-									<Button
-										p='0px'
-										variant='no-hover'
-										bg='transparent'
-										my={{ sm: '1.5rem', lg: '0px' }}>
-										<Text
-											fontSize='sm'
-											color='#fff'
-											fontWeight='bold'
-											cursor='pointer'
-											transition='all .3s ease'
-											my={{ sm: '1.5rem', lg: '0px' }}
-											_hover={{ me: '4px' }}>
-											Tab to record
-										</Text>
-										<Icon
-											as={BsArrowRight}
-											w='20px'
-											h='20px'
-											color='#fff'
-											fontSize='2xl'
-											transition='all .3s ease'
-											mx='.3rem'
-											cursor='pointer'
-											pt='4px'
-											_hover={{ transform: 'translateX(20%)' }}
-										/>
-									</Button>
-								</Flex>
 							</Flex>
+							 <Flex
+                flexDirection='column'
+                h='100%'
+                p='22px'
+                minW='40%' // Adjust width as needed
+                justifyContent='space-between' // This will space the items evenly
+            >
+				<Box mb='10px'>
+					<Text fontSize='20px' color='white' fontWeight='bold'> Address:  1808 Cole rd </Text>
+				</Box>
+
+				<Box mb='10px'>
+					<Text fontSize='20px' color='white' fontWeight='bold'> Weight:  140 lbs </Text>
+				</Box>
+
+				<Box mb='10px'>
+					<Text fontSize='20px' color='white' fontWeight='bold'> Height:  5'9 </Text>
+				</Box>
+
+			</Flex>
 						</Flex>
 					</CardBody>
 				</Card>
@@ -268,38 +261,44 @@ export default function Dashboard() {
 				{/* Projects */}
 				
 				{/* Orders Overview */}
-				<Card>
+				<Card maxW='50%'>
 					<CardHeader mb='32px'>
 						<Flex direction='column'>
 							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-								Orders overview
+								Chat
 							</Text>
 							<Flex align='center'>
 								<Icon as={AiFillCheckCircle} color='green.500' w='15px' h='15px' me='5px' />
 								<Text fontSize='sm' color='gray.400' fontWeight='normal'>
-									<Text fontWeight='bold' as='span' color='gray.400'>
-										+30%
-									</Text>{' '}
-									this month
+									Online
 								</Text>
 							</Flex>
 						</Flex>
 					</CardHeader>
 					<CardBody>
-						<Flex direction='column' lineHeight='21px'>
-							{timelineData.map((row, index, arr) => {
-								return (
-									<TimelineRow
-										logo={row.logo}
-										title={row.title}
-										date={row.date}
-										color={row.color}
-										index={index}
-										arrLength={arr.length}
-									/>
-								);
-							})}
-						</Flex>
+					{/*Online chat here*/}	
+						<VStack align='start' spacing={4}>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Hi! How can I help you today?</Text>
+							</Box>
+							<Box bg='blue.600' p={3} borderRadius='lg' maxW='75%' alignSelf='end'>
+							<Text color='white'>You: I'm just testing the chat feature.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<InputGroup>
+								<Input placeholder='Type a message...' size='md' color='white' bg='gray.800' />
+								<Button
+									bg='blue.600'
+									border='none'
+									_hover={{bg: 'blue.700'}}
+									_active={{bg: 'transparent'}}	
+									>
+									<ArrowUpIcon color='white' />
+								</Button>
+							</InputGroup>
+						</VStack>	
 					</CardBody>
 				</Card>
 			</Grid>
