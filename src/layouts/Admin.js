@@ -40,7 +40,6 @@ export default function Dashboard() {
   // Chakra Color Mode
   return (
     <ChakraProvider theme={theme} resetCss={false}>
-      
       <MainPanel
         ref={mainPanel}
         w="100%"
