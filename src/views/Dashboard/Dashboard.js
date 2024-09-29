@@ -26,6 +26,7 @@ import {
 	Grid,
 	Icon,
 	Input,
+	Image,
 	InputLeftElement,
 	Progress,
 	SimpleGrid,
@@ -112,7 +113,7 @@ export default function Dashboard() {
                 justifyContent='space-between' // This will space the items evenly
             >
 				<Box mb='10px'>
-					<Text fontSize='20px' color='white' fontWeight='bold'> Address:  1808 Cole rd </Text>
+					<Text fontSize='20px' color='white' fontWeight='bold'> Address:  1808 Duffield rd </Text>
 				</Box>
 
 				<Box mb='10px'>
@@ -128,59 +129,21 @@ export default function Dashboard() {
 					</CardBody>
 				</Card>
 				{/* Satisfaction Rate */}
-				<Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }}>
+				<Card gridArea={{ md: '2 / 1 / 3 / 2', '2xl': 'auto' }} maxW='70%'>
 					<CardHeader mb='24px'>
-						<Flex direction='column'>
-							<Text color='#fff' fontSize='lg' fontWeight='bold' mb='4px'>
-								Satisfaction Rate
-							</Text>
-							<Text color='gray.400' fontSize='sm'>
-								From all projects
-							</Text>
+						<Flex flexDirection={{ sm: 'column', lg: 'row' }} w='100%' h='100%' alignItems='center'>
+							<Text fontSize='15px' color='white'> 12:26pm </Text>	
+							<Spacer />
+							<Icon as={AiFillCheckCircle} color='green.500' w='15px' h='15px' me='5px' />			
+							<Text fontSize='15px' color='white' > Online </Text>	
 						</Flex>
 					</CardHeader>
-					<Flex direction='column' justify='center' align='center'>
-						<Box zIndex='-1'>
-							<CircularProgress
-								size={200}
-								value={80}
-								thickness={6}
-								color='#582CFF'
-								variant='vision'
-								rounded>
-								<CircularProgressLabel>
-									<IconBox mb='20px' mx='auto' bg='brand.200' borderRadius='50%' w='48px' h='48px'>
-										<Icon as={BiHappy} color='#fff' w='30px' h='30px' />
-									</IconBox>
-								</CircularProgressLabel>
-							</CircularProgress>
+					<Flex direction='column' justify='center' align='center' h='100%'>
+						<Box zIndex='10' boxSize='80%'>
+							<Image src='https://pm1.aminoapps.com/7544/d523bfe83733e68a0f353744a72131efd890b496r1-500-670v2_hq.jpg' alt='rat' objectFit="cover" boxSize="100%">
+							</Image>	
 						</Box>
-						<Stack
-							direction='row'
-							spacing={{ sm: '42px', md: '68px' }}
-							justify='center'
-							maxW={{ sm: '270px', md: '300px', lg: '100%' }}
-							mx={{ sm: 'auto', md: '0px' }}
-							p='18px 22px'
-							bg='linear-gradient(126.97deg, rgb(6, 11, 40) 28.26%, rgba(10, 14, 35) 91.2%)'
-							borderRadius='20px'
-							position='absolute'
-							bottom='5%'>
-							<Text fontSize='xs' color='gray.400'>
-								0%
-							</Text>
-							<Flex direction='column' align='center' minW='80px'>
-								<Text color='#fff' fontSize='28px' fontWeight='bold'>
-									95%
-								</Text>
-								<Text fontSize='xs' color='gray.400'>
-									Based on likes
-								</Text>
-							</Flex>
-							<Text fontSize='xs' color='gray.400'>
-								100%
-							</Text>
-						</Stack>
+						
 					</Flex>
 				</Card>
 				{/* Referral Tracking */}
