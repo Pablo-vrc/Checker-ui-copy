@@ -72,6 +72,7 @@ import {
 import { dashboardTableData, timelineData } from 'variables/general';
 
 export default function Dashboard() {
+	const messages = ["Hi Number One", "Hi Number two", "How are you one", "I am good two"];
 	return (
 		<Flex flexDirection='column' pt={{ base: '120px', md: '75px' }}>
 			<SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='4px'>
@@ -162,7 +163,7 @@ export default function Dashboard() {
 				{/* Projects */}
 				
 				{/* Orders Overview */}
-				<Card maxW='50%'>
+				<Card maxW='50%' maxH="80%">
 					<CardHeader mb='32px'>
 						<Flex direction='column'>
 							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
@@ -176,14 +177,28 @@ export default function Dashboard() {
 							</Flex>
 						</Flex>
 					</CardHeader>
-					<CardBody>
+					<CardBody maxH="calc(50vh - 80px)" overflowY='scroll' display="flex" flexDirection="column" justifyContent="space-between">
 					{/*Online chat here*/}	
-						<VStack align='start' spacing={4}>
+						<VStack align='start' spacing={4} >
+							
 							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
 							<Text color='white'>User: Hi! How can I help you today?</Text>
 							</Box>
 							<Box bg='blue.600' p={3} borderRadius='lg' maxW='75%' alignSelf='end'>
 							<Text color='white'>You: I'm just testing the chat feature.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
 							</Box>
 							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
 							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
