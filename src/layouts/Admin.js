@@ -47,6 +47,7 @@ export default function Dashboard() {
         minH="100vh">
         <PanelContent>
           <PanelContainer>
+            <Text fontSize='3xl' fontWeight="bold" ml="4" color="white">Heard</Text>
             <Dash />
           </PanelContainer>
         </PanelContent>

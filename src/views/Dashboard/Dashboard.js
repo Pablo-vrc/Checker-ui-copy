@@ -76,13 +76,13 @@ export default function Dashboard() {
 					<CardBody w='100%' h='100%'>
 						<Flex flexDirection={{ sm: 'column', lg: 'row' }} w='100%' h='100%'>
 							<Flex flexDirection='column' h='100%' p='22px' minW='60%' lineHeight='1.6'>
-								<Text fontSize='28px' color='#fff' fontWeight='bold' mb='6px'>
+								<Text fontSize='25px' color='#fff' fontWeight='bold' mb='6px'>
 									Name: Mark Johnson
 								</Text>
-								<Text fontSize='24px' color='white' fontWeight='normal'>
+								<Text fontSize='18px' color='white' fontWeight='normal'>
 									Age: 22 years old
 								</Text>
-								<Text fontSize='md' color='white' fontWeight='normal' mb='auto'>
+								<Text fontSize='18px' color='white' fontWeight='normal' mb='auto'>
 									Native Language: Spanish
 								</Text>
 								<Spacer />
@@ -95,13 +95,13 @@ export default function Dashboard() {
 								justifyContent='space-between' // This will space the items evenly
 							>
 								<Box mb='10px'>
-									<Text fontSize='20px' color='white' fontWeight='bold'> Address: 1808 Duffield rd </Text>
+									<Text fontSize='18px' color='white' > Address: 1808 Duffield rd </Text>
 								</Box>
 								<Box mb='10px'>
-									<Text fontSize='20px' color='white' fontWeight='bold'> Weight: 140 lbs </Text>
+									<Text fontSize='18px' color='white' > Weight: 140 lbs </Text>
 								</Box>
 								<Box mb='10px'>
-									<Text fontSize='20px' color='white' fontWeight='bold'> Height: 5'9 </Text>
+									<Text fontSize='18px' color='white' > Height: 5'9 </Text>
 								</Box>
 							</Flex>
 						</Flex>
@@ -110,13 +110,13 @@ export default function Dashboard() {
 			</Grid>
 
 			{/* Chat, Live Stream, and Geolocation Cards Side by Side */}
-			<Grid templateColumns={{ sm: '1fr', md: '1fr 1fr 1fr' }} gap='24px' my='26px'>
+			<Grid templateColumns={{ sm: '1fr', md: '1fr 1fr 1fr' }} gap='24px' my='10px'>
 
 				{/* Live Stream Card */}
-				<Card>
-					<CardHeader mb='32px'>
+				<Card maxH="80%">
+					<CardHeader mb='22px'>
 						<Flex flexDirection={{ sm: 'column', lg: 'row' }} w='100%' h='100%' alignItems='center'>
-							<Text fontSize='15px' color='white'> 12:26pm </Text>
+							<Text fontSize='15px' color='white'> 12:26:30pm - Local</Text>
 							<Spacer />
 							<Icon as={AiFillCheckCircle} color='green.500' w='15px' h='15px' me='5px' />
 							<Text fontSize='15px' color='white'> Online </Text>
@@ -124,13 +124,13 @@ export default function Dashboard() {
 					</CardHeader>
 					<CardBody>
 						{/* Add live stream content here */}
-						<Image src='https://pm1.aminoapps.com/7544/d523bfe83733e68a0f353744a72131efd890b496r1-500-670v2_hq.jpg' />
+						<Image src='https://pm1.aminoapps.com/7544/d523bfe83733e68a0f353744a72131efd890b496r1-500-670v2_hq.jpg' maxH="70%"/>
 					</CardBody>
 				</Card>
 
 				{/* Geolocation Card */}
-				<Card>
-					<CardHeader mb='32px'>
+				<Card maxH="80%">
+					<CardHeader mb='22px'>
 						<Flex direction='column' w='100%' h='100%'>
 							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
 								Geolocation
