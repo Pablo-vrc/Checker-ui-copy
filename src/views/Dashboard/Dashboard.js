@@ -111,60 +111,6 @@ export default function Dashboard() {
 
 			{/* Chat, Live Stream, and Geolocation Cards Side by Side */}
 			<Grid templateColumns={{ sm: '1fr', md: '1fr 1fr 1fr' }} gap='24px' my='26px'>
-				{/* Chat Card */}
-				<Card maxH="80%">
-					<CardHeader mb='32px'>
-						<Flex direction='column'>
-							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-								Chat
-							</Text>
-							<Flex align='center'>
-								<Icon as={AiFillCheckCircle} color='green.500' w='15px' h='15px' me='5px' />
-								<Text fontSize='sm' color='gray.400' fontWeight='normal'>
-									Online
-								</Text>
-							</Flex>
-						</Flex>
-					</CardHeader>
-					<CardBody maxH="calc(50vh - 80px)" overflowY='scroll' display="flex" flexDirection="column" justifyContent="space-between">
-					{/*Online chat here*/}	
-						<VStack align='start' spacing={4} >
-							
-							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
-								<Text color='white'>User: Hi! How can I help you today?</Text>
-							</Box>
-							<Box bg='blue.600' p={3} borderRadius='lg' maxW='75%' alignSelf='end'>
-								<Text color='white'>You: I'm just testing the chat feature.</Text>
-							</Box>
-							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
-								<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
-							</Box>
-
-							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
-							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
-							</Box>
-							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
-							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
-							</Box>
-							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
-							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
-							</Box>
-							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
-							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
-							</Box>
-							<InputGroup>
-								<Input placeholder='Type a message...' size='md' color='white' bg='gray.800' />
-								<Button
-									bg='blue.600'
-									border='none'
-									_hover={{ bg: 'blue.700' }}
-									_active={{ bg: 'transparent' }}>
-									<ArrowUpIcon color='white' />
-								</Button>
-							</InputGroup>
-						</VStack>
-					</CardBody>
-				</Card>
 
 				{/* Live Stream Card */}
 				<Card>
@@ -197,6 +143,63 @@ export default function Dashboard() {
 						boxSize="100%" 
 						objectFit="cover" 
 						borderRadius="md" />
+					</CardBody>
+				</Card>
+
+				{/* Chat Card */}
+				<Card maxH="80%">
+					<CardHeader mb='32px'>
+						<Flex direction='column'>
+							<Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
+								Chat
+							</Text>
+							<Flex align='center'>
+								<Icon as={AiFillCheckCircle} color='green.500' w='15px' h='15px' me='5px' />
+								<Text fontSize='sm' color='gray.400' fontWeight='normal'>
+									Online
+								</Text>
+							</Flex>
+						</Flex>
+					</CardHeader>
+					<CardBody maxH="calc(50vh - 80px)" display="flex" flexDirection="column" justifyContent="space-between">
+					{/*Online chat here*/}	
+						<VStack align='start' spacing={4} overflowY='scroll' maxH='calc(50vh - 120px)' pr={2}>
+							
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+								<Text color='white'>User: Hi! How can I help you today?</Text>
+							</Box>
+							<Box bg='blue.600' p={3} borderRadius='lg' maxW='75%' alignSelf='end'>
+								<Text color='white'>You: I'm just testing the chat feature.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+								<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							<Box bg='gray.700' p={3} borderRadius='lg' maxW='75%'>
+							<Text color='white'>User: Looks good! Let me know if you need anything.</Text>
+							</Box>
+							</VStack>
+							<Box mt={4} w='100%'>
+							<InputGroup>
+								<Input placeholder='Type a message...' size='md' color='white' bg='gray.800' />
+								<Button
+									bg='blue.600'
+									border='none'
+									_hover={{ bg: 'blue.700' }}
+									_active={{ bg: 'transparent' }}>
+									<ArrowUpIcon color='white' />
+								</Button>
+							</InputGroup>
+						</Box>
 					</CardBody>
 				</Card>
 			</Grid>
